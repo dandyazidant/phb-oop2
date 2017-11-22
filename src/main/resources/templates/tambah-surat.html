@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>Aplikasi Perekaman Data Surat Masuk</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.css"/>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="navbar-header">
+			<h3><p style="color: #ffffff; margin-left: 470px">Aplikasi Perekaman Data Surat Masuk</p></h3>
+		</div>
+	</nav>
+	<div class="main-wrapper col-xs-12 col-md-9">
+		<section class="content">
+			<div class="container box body">
+				<h1 style="text-align:center;">Tambah Data Surat Masuk</h1>
+				<form th:object="${srt}" 
+				th:action="@{/tambah-surat}"
+				method="post" style="margin-left: 200px;">
+				<div class="form-group">
+					<label for="Id">Id</label>
+					<input type="text" th:field="*{id}" class="form-control" id="id" placeholder="Masukkan Id"/>
+				</div>
+				<div class="form-group">
+					<label for="tgl_surat">Tanggal Surat</label>
+					<input type="date" th:field="*{tgl_surat}" class="form-control" id="tgl_surat" placeholder="Tanggal Surat"/>
+				</div>
+				<div class="form-group">
+					<label for="judul">Judul</label>
+					<input type="text" th:field="*{judul}" class="form-control" id="judul" placeholder="Judul"/>
+				</div>
+				<div class="form-group">
+					<label for="kepada">Kepada</label>
+					<input type="text" th:field="*{kepada}" class="form-control" id="kepada" placeholder="Kepada"/>
+				</div>
+				<button type="submit" class="btn btn-danger">Submit</button>
+			</form>
+		</div>
+	</section>
+</div>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
