@@ -1,0 +1,5 @@
+srtmsk\surat_masuk\controller\AppController.class
+srtmsk\surat_masuk\repo\SrtmasukRepo.class
+srtmsk\surat_masuk\entity\Suratmasuk.class
+srtmsk\surat_masuk\controller\WebController.class
+srtmsk\surat_masuk\SuratMasukApplication.class
